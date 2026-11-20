@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Times New Roman", Times, "Tinos", Georgia, serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    background-color: #050505;
+    color: #f4f4f5;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  /* Optical compensation for Poppins paragraphs on dark cinematic surfaces */
+  p {
+    font-family: var(--font-sans);
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Custom sleek dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6d28d9;
+}
+
+/* Marquee animation using compositor-only transform */
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 34s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle cinematic Ken Burns motion for hero & canvas backdrops */
+@keyframes cinema-drift {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.045) translate3d(-0.8%, -0.6%, 0);
+  }
+  100% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
+.animate-cinema-drift {
+  animation: cinema-drift 20s ease-in-out infinite;
+}
+
+@keyframes motion-blur-sweep-a {
+  0% {
+    transform: scale(1.25) translate3d(-3%, -2%, 0) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.34) translate3d(3%, 2.5%, 0) rotate(2deg);
+  }
+  100% {
+    transform: scale(1.25) translate3d(-3%, -2%, 0) rotate(0deg);
+  }
+}
+
+@keyframes motion-blur-sweep-b {
+  0% {
+    transform: scale(1.38) translate3d(4%, 2%, 0) rotate(-2deg);
+  }
+  50% {
+    transform: scale(1.28) translate3d(-4%, -3%, 0) rotate(1.5deg);
+  }
+  100% {
+    transform: scale(1.38) translate3d(4%, 2%, 0) rotate(-2deg);
+  }
+}
+
+.animate-motion-blur-a {
+  animation: motion-blur-sweep-a 16s ease-in-out infinite;
+}
+
+.animate-motion-blur-b {
+  animation: motion-blur-sweep-b 22s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee,
+  .animate-cinema-drift,
+  .animate-motion-blur-a,
+  .animate-motion-blur-b {
+    animation: none !important;
+  }
+}

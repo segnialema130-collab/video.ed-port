@@ -1,0 +1,8 @@
+{
+  "name": "SEGNI EDITOR — Segni Alemayehu",
+  "description": "Portfolio of Segni Alemayehu (SEGNI EDITOR), a professional video editor and motion graphics designer crafting cinematic edits, YouTube narratives, commercial films, and 3D brand animations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
