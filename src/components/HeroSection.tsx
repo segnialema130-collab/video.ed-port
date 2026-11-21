@@ -32,12 +32,12 @@ export function HeroSection() {
               <span className="bg-gradient-to-r from-white via-amber-100 to-amber-300 bg-clip-text text-transparent">
                 {BRAND_CONFIG.editorName},
               </span>{' '}
-              <span className="block mt-2 bg-gradient-to-r from-violet-400 via-fuchsia-300 to-sky-400 bg-clip-text text-transparent">
+              <span className="block mt-2 bg-gradient-to-r from-sky-300 via-indigo-200 to-amber-200 bg-clip-text text-transparent">
                 Video Editor &amp; Motion Designer
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-300 sm:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-200/90 sm:text-lg">
               I&apos;m Segni Alemayehu, a creative video editor passionate about transforming raw footage into powerful
               visual experiences.
             </p>
@@ -46,7 +46,7 @@ export function HeroSection() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="#portfolio"
-                className="inline-flex min-h-[46px] items-center gap-2.5 rounded-lg bg-gradient-to-r from-violet-600 to-blue-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-150 hover:from-violet-500 hover:to-blue-500 hover:shadow-[0_0_28px_rgba(139,92,246,0.45)] whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+                className="inline-flex min-h-[46px] items-center gap-2.5 rounded-lg bg-gradient-to-r from-sky-500 to-indigo-600 px-6 py-3 text-sm font-semibold text-white transition-all duration-150 hover:from-sky-400 hover:to-indigo-500 hover:shadow-[0_0_28px_rgba(56,189,248,0.4)] whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
               >
                 Explore My Work
                 <ArrowRight className="h-4 w-4" />
@@ -54,7 +54,7 @@ export function HeroSection() {
 
               <a
                 href="#contact"
-                className="inline-flex min-h-[46px] items-center gap-2 rounded-lg border border-white/15 bg-zinc-900/70 backdrop-blur-md px-6 py-3 text-sm font-semibold text-zinc-100 transition-colors duration-150 hover:border-violet-400/50 hover:bg-zinc-800/80 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400"
+                className="inline-flex min-h-[46px] items-center gap-2 rounded-lg border border-sky-200/20 bg-[#1B264B]/75 backdrop-blur-md px-6 py-3 text-sm font-semibold text-slate-100 transition-colors duration-150 hover:border-sky-400/60 hover:bg-[#23315E]/85 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
               >
                 Hire Me
               </a>
@@ -62,14 +62,14 @@ export function HeroSection() {
 
             {/* Social Links */}
             <div className="mt-8 flex items-center gap-3 pt-2">
-              <span className="text-xs font-medium text-zinc-400">Connect:</span>
+              <span className="text-xs font-medium text-slate-300">Connect:</span>
               <div className="flex items-center gap-2">
                 <a
                   href={BRAND_CONFIG.contact.youtubeUrl}
                   target="_blank"
                   rel="noreferrer"
                   aria-label="YouTube"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-zinc-900/60 text-zinc-300 transition-all duration-150 hover:border-violet-400/50 hover:text-white hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-sky-200/15 bg-[#192447]/70 text-slate-200 transition-all duration-150 hover:border-sky-400/60 hover:text-white hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
                 >
                   <Youtube className="h-4 w-4" />
                 </a>
@@ -78,7 +78,7 @@ export function HeroSection() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-zinc-900/60 text-zinc-300 transition-all duration-150 hover:border-violet-400/50 hover:text-white hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-sky-200/15 bg-[#192447]/70 text-slate-200 transition-all duration-150 hover:border-sky-400/60 hover:text-white hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
                 >
                   <Instagram className="h-4 w-4" />
                 </a>
@@ -87,7 +87,7 @@ export function HeroSection() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Telegram"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-zinc-900/60 text-zinc-300 transition-all duration-150 hover:border-sky-400/50 hover:text-white hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-sky-200/15 bg-[#192447]/70 text-slate-200 transition-all duration-150 hover:border-sky-400/60 hover:text-white hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
                 >
                   <Send className="h-4 w-4" />
                 </a>
@@ -96,14 +96,14 @@ export function HeroSection() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="WhatsApp"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-zinc-900/60 text-zinc-300 transition-all duration-150 hover:border-sky-400/50 hover:text-white hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-sky-200/15 bg-[#192447]/70 text-slate-200 transition-all duration-150 hover:border-sky-400/60 hover:text-white hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
                 >
                   <MessageCircle className="h-4 w-4" />
                 </a>
                 <a
                   href={`mailto:${BRAND_CONFIG.contact.email}`}
                   aria-label="Email Segni"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-zinc-900/60 text-zinc-300 transition-all duration-150 hover:border-violet-400/50 hover:text-white hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-sky-200/15 bg-[#192447]/70 text-slate-200 transition-all duration-150 hover:border-sky-400/60 hover:text-white hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
                 >
                   <Mail className="h-4 w-4" />
                 </a>
@@ -118,7 +118,7 @@ export function HeroSection() {
             transition={{duration: 0.55, delay: 0.08, ease: [0.16, 1, 0.3, 1]}}
             className="relative flex justify-center md:col-span-5 md:justify-end"
           >
-            <div className="group relative h-72 w-72 sm:h-80 sm:w-80 md:h-[340px] md:w-[340px] lg:h-[380px] lg:w-[380px] overflow-hidden rounded-full border-2 border-violet-400/45 bg-[#0C0C12] shadow-[0_0_40px_rgba(139,92,246,0.22)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-105 hover:border-sky-400/75 hover:shadow-[0_0_52px_rgba(56,189,248,0.3)] will-change-transform">
+            <div className="group relative h-72 w-72 sm:h-80 sm:w-80 md:h-[340px] md:w-[340px] lg:h-[380px] lg:w-[380px] overflow-hidden rounded-full border-2 border-sky-300/45 bg-[#162040] shadow-[0_0_48px_rgba(56,189,248,0.22)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-105 hover:border-amber-300/75 hover:shadow-[0_0_56px_rgba(251,191,36,0.26)] will-change-transform">
               {!imgError ? (
                 <img
                   src={BRAND_CONFIG.heroPortrait}
@@ -128,11 +128,11 @@ export function HeroSection() {
                   className="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-110"
                 />
               ) : (
-                <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-zinc-900 via-[#12101C] to-zinc-950 p-6 text-center">
+                <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-[#162040] via-[#1E2B54] to-[#111831] p-6 text-center">
                   <span className="font-display text-xl font-bold tracking-wider text-white">
                     {BRAND_CONFIG.brandName}
                   </span>
-                  <span className="mt-1.5 text-xs text-zinc-400">Segni Alemayehu</span>
+                  <span className="mt-1.5 text-xs text-slate-300">Segni Alemayehu</span>
                 </div>
               )}
             </div>
@@ -140,21 +140,21 @@ export function HeroSection() {
         </div>
 
         {/* Full-Width 4-Column Metrics Row Below Hero Split */}
-        <div className="mt-12 grid grid-cols-2 gap-6 border-t border-white/10 pt-8 md:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-6 border-t border-sky-200/15 pt-8 md:grid-cols-4">
           {HERO_METRICS.map((metric) => (
             <div key={metric.label} className="flex flex-col">
               <span className="font-display text-2xl font-bold tracking-tight text-white tabular-nums sm:text-3xl">
                 {metric.value}
               </span>
-              <span className="mt-1 text-sm text-zinc-400">{metric.label}</span>
+              <span className="mt-1 text-sm text-slate-300">{metric.label}</span>
             </div>
           ))}
         </div>
       </div>
 
       {/* Editorial Marquee Divider Ribbon */}
-      <div className="mt-16 border-y border-white/10 bg-[#08080C]/65 backdrop-blur-sm py-3.5 overflow-hidden select-none">
-        <div className="animate-marquee text-xs font-medium tracking-[0.22em] text-zinc-400 uppercase">
+      <div className="mt-16 border-y border-sky-200/15 bg-[#152042]/65 backdrop-blur-sm py-3.5 overflow-hidden select-none">
+        <div className="animate-marquee text-xs font-medium tracking-[0.22em] text-slate-300 uppercase">
           <span className="mx-6">Selected Works</span>
           <span aria-hidden="true" className="text-violet-400">·</span>
           <span className="mx-6">Cinematic Storytelling</span>

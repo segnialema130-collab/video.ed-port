@@ -59,7 +59,7 @@ export function Navbar() {
     <header
       className={`fixed top-0 inset-x-0 z-30 transition-colors duration-200 ${
         scrolled
-          ? 'bg-[#050505]/85 backdrop-blur-xl border-b border-white/10'
+          ? 'bg-[#101834]/85 backdrop-blur-xl border-b border-sky-200/12 shadow-[0_8px_32px_rgba(8,14,35,0.35)]'
           : 'bg-transparent border-b border-transparent'
       }`}
     >
@@ -68,7 +68,7 @@ export function Navbar() {
         <a
           href="#home"
           onClick={() => handleLinkClick('home')}
-          className="font-display text-lg font-bold tracking-[0.14em] text-white transition-all duration-200 ease-out hover:scale-105 hover:text-sky-300 active:scale-95 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 rounded-sm"
+          className="font-display text-lg font-bold tracking-[0.14em] text-white transition-all duration-200 ease-out hover:scale-105 hover:text-sky-300 active:scale-95 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 rounded-sm"
         >
           {BRAND_CONFIG.brandName}
         </a>
@@ -83,10 +83,10 @@ export function Navbar() {
                 href={link.href}
                 onClick={() => handleLinkClick(link.id)}
                 aria-current={isActive ? 'page' : undefined}
-                className={`rounded-lg px-3.5 py-1.5 text-sm font-medium transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 active:scale-95 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${
+                className={`rounded-lg px-3.5 py-1.5 text-sm font-medium transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 active:scale-95 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
                   isActive
-                    ? 'scale-[1.03] bg-gradient-to-r from-violet-600/35 to-sky-500/25 border border-violet-400/50 text-sky-300 shadow-[0_0_16px_rgba(139,92,246,0.25)]'
-                    : 'border border-transparent text-zinc-300 hover:bg-white/5 hover:text-white'
+                    ? 'scale-[1.03] bg-gradient-to-r from-sky-500/30 to-indigo-500/35 border border-sky-300/50 text-sky-200 shadow-[0_0_18px_rgba(56,189,248,0.22)]'
+                    : 'border border-transparent text-slate-200/90 hover:bg-white/10 hover:text-white'
                 }`}
               >
                 {link.label}
@@ -100,7 +100,7 @@ export function Navbar() {
           <a
             href="#contact"
             onClick={() => handleLinkClick('contact')}
-            className="inline-flex min-h-[40px] items-center justify-center rounded-lg bg-gradient-to-r from-violet-600 to-blue-600 px-5 py-2 text-sm font-semibold text-white transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 hover:from-violet-500 hover:to-blue-500 hover:shadow-[0_0_24px_rgba(139,92,246,0.4)] active:scale-95 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+            className="inline-flex min-h-[40px] items-center justify-center rounded-lg bg-gradient-to-r from-sky-500 to-indigo-600 px-5 py-2 text-sm font-semibold text-white transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 hover:from-sky-400 hover:to-indigo-500 hover:shadow-[0_0_24px_rgba(56,189,248,0.4)] active:scale-95 whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300"
           >
             Hire Me
           </a>
@@ -110,7 +110,7 @@ export function Navbar() {
             onClick={() => setMobileOpen((prev) => !prev)}
             aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={mobileOpen}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-zinc-900/70 text-zinc-200 transition-all duration-200 ease-out hover:scale-105 active:scale-95 md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-sky-200/15 bg-[#192447]/80 text-slate-100 transition-all duration-200 ease-out hover:scale-105 active:scale-95 md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -119,7 +119,7 @@ export function Navbar() {
 
       {/* Mobile Menu Drawer */}
       {mobileOpen && (
-        <div className="border-t border-white/10 bg-[#08080D]/95 backdrop-blur-xl px-6 py-5 md:hidden">
+        <div className="border-t border-sky-200/15 bg-[#121B3A]/95 backdrop-blur-xl px-6 py-5 md:hidden">
           <nav aria-label="Mobile Navigation" className="flex flex-col gap-2">
             {NAV_LINKS.map((link) => {
               const isActive = activeSection === link.id;
@@ -131,8 +131,8 @@ export function Navbar() {
                   aria-current={isActive ? 'page' : undefined}
                   className={`flex min-h-[44px] items-center rounded-lg px-3.5 text-base font-medium transition-all duration-200 ease-out hover:translate-x-1.5 ${
                     isActive
-                      ? 'bg-gradient-to-r from-violet-600/35 to-sky-500/25 border border-violet-400/50 text-sky-300'
-                      : 'border border-transparent text-zinc-200 hover:bg-white/5 hover:text-white'
+                      ? 'bg-gradient-to-r from-sky-500/30 to-indigo-500/35 border border-sky-300/50 text-sky-200'
+                      : 'border border-transparent text-slate-200 hover:bg-white/10 hover:text-white'
                   }`}
                 >
                   {link.label}

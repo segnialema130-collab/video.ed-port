@@ -38,16 +38,16 @@ function SoftwareBadgeIcon({code, accentColor, bgTint}: {code: string; accentCol
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="border-t border-white/10 bg-[#08080D]/40 backdrop-blur-xs py-20 lg:py-28">
+    <section id="skills" className="border-t border-sky-200/12 bg-[#141E3E]/55 backdrop-blur-xs py-20 lg:py-28">
       <div className="mx-auto max-w-[1280px] px-6">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="text-sm font-medium text-sky-400">Software &amp; Toolkit</p>
+            <p className="text-sm font-medium text-sky-300">Software &amp; Toolkit</p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Industry-Standard Editing Stack
             </h2>
           </div>
-          <p className="max-w-md text-sm leading-relaxed text-zinc-400">
+          <p className="max-w-md text-sm leading-relaxed text-slate-300">
             Mastery across timeline editing, keyframe compositing, vector graphics, and rapid social cutdowns.
           </p>
         </div>
@@ -60,7 +60,7 @@ export function SkillsSection() {
               whileInView={{opacity: 1, y: 0}}
               viewport={{once: true, margin: '-40px'}}
               transition={{duration: 0.35, delay: idx * 0.06, ease: [0.16, 1, 0.3, 1]}}
-              className="flex flex-col justify-between rounded-2xl border border-white/10 bg-[#0E0E15] p-6 transition-colors duration-200 hover:border-white/25"
+              className="flex flex-col justify-between rounded-2xl border border-sky-200/15 bg-[#1B264B]/80 backdrop-blur-md p-6 transition-colors duration-200 hover:border-sky-400/50 hover:bg-[#22305C]/90"
             >
               <div>
                 <div className="flex items-center justify-between gap-3">
@@ -69,17 +69,17 @@ export function SkillsSection() {
                     accentColor={skill.accentColor}
                     bgTint={skill.bgTint}
                   />
-                  <span className="font-mono text-sm font-semibold text-zinc-200 tabular-nums">
+                  <span className="font-mono text-sm font-semibold text-slate-200 tabular-nums">
                     {skill.proficiency}%
                   </span>
                 </div>
 
                 <h3 className="mt-5 font-display text-lg font-semibold text-white">{skill.name}</h3>
-                <p className="mt-2 text-xs leading-relaxed text-zinc-400">{skill.specialty}</p>
+                <p className="mt-2 text-xs leading-relaxed text-slate-300">{skill.specialty}</p>
               </div>
 
               {/* Compositor-only progress indicator */}
-              <div className="mt-6 h-1.5 w-full overflow-hidden rounded-full bg-zinc-800">
+              <div className="mt-6 h-1.5 w-full overflow-hidden rounded-full bg-[#111831]">
                 <motion.div
                   initial={{scaleX: 0}}
                   whileInView={{scaleX: skill.proficiency / 100}}

@@ -21,7 +21,7 @@ export default function App() {
   const [inboxOpen, setInboxOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-[#050505] text-zinc-100">
+    <div className="relative min-h-screen bg-[#111831] text-slate-100">
       <MotionBlurBackground />
       <LoadingIntro />
       <CustomCursor />

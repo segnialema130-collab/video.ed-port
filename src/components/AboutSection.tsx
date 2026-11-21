@@ -33,24 +33,24 @@ export function AboutSection() {
             transition={{duration: 0.45, ease: [0.16, 1, 0.3, 1]}}
             className="lg:col-span-5"
           >
-            <p className="text-sm font-medium text-violet-400">About Me</p>
+            <p className="text-sm font-medium text-sky-300">About Me</p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Crafting Emotion, Rhythm, and Clarity in Every Cut
             </h2>
-            <p className="mt-5 text-base leading-relaxed text-zinc-300">
+            <p className="mt-5 text-base leading-relaxed text-slate-200/90">
               I&apos;m <strong className="font-semibold text-white">{BRAND_CONFIG.editorName}</strong>, founder of{' '}
               <strong className="font-semibold text-white">{BRAND_CONFIG.brandName}</strong>. I partner with YouTube
               creators, ambitious startups, and commercial directors to turn unpolished camera cards into films that
               command attention from the opening second.
             </p>
 
-            <div className="mt-8 border-t border-white/10 pt-6 flex flex-wrap gap-x-8 gap-y-4 text-sm text-zinc-300">
+            <div className="mt-8 border-t border-sky-200/15 pt-6 flex flex-wrap gap-x-8 gap-y-4 text-sm text-slate-200">
               <div>
-                <span className="block text-xs text-zinc-400">Primary Focus</span>
+                <span className="block text-xs text-slate-400">Primary Focus</span>
                 <span className="font-medium text-white">Cinematic &amp; Retention Editing</span>
               </div>
               <div>
-                <span className="block text-xs text-zinc-400">Availability</span>
+                <span className="block text-xs text-slate-400">Availability</span>
                 <span className="font-medium text-white">Freelance &amp; Retainers</span>
               </div>
             </div>
@@ -65,11 +65,11 @@ export function AboutSection() {
                 whileInView={{opacity: 1, y: 0}}
                 viewport={{once: true, margin: '-60px'}}
                 transition={{duration: 0.4, delay: idx * 0.06, ease: [0.16, 1, 0.3, 1]}}
-                className="rounded-2xl border border-white/10 bg-[#0B0B10] p-6 transition-colors duration-200 hover:border-violet-500/40"
+                className="rounded-2xl border border-sky-200/15 bg-[#182244]/80 backdrop-blur-md p-6 transition-colors duration-200 hover:border-sky-400/50 hover:bg-[#1E2B55]/85"
               >
-                <span className="font-mono text-xs text-sky-400 tabular-nums">0{idx + 1}.</span>
+                <span className="font-mono text-xs text-amber-300 tabular-nums">0{idx + 1}.</span>
                 <h3 className="mt-2 font-display text-xl font-semibold text-white">{pillar.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-300">{pillar.body}</p>
+                <p className="mt-3 text-sm leading-relaxed text-slate-200/90">{pillar.body}</p>
               </motion.article>
             ))}
           </div>

@@ -8,8 +8,8 @@
 
 @layer base {
   html {
-    background-color: #050505;
-    color: #f4f4f5;
+    background-color: #111831;
+    color: #f1f5f9;
     font-family: var(--font-sans);
     scroll-behavior: smooth;
   }
@@ -19,29 +19,29 @@
     text-wrap: balance;
   }
 
-  /* Optical compensation for Poppins paragraphs on dark cinematic surfaces */
+  /* Optical compensation for Poppins paragraphs on studio slate surfaces */
   p {
     font-family: var(--font-sans);
     letter-spacing: 0.01em;
   }
 }
 
-/* Custom sleek dark scrollbar */
+/* Custom sleek studio slate scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #111831;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #2c3b66;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6d28d9;
+  background: #38bdf8;
 }
 
 /* Marquee animation using compositor-only transform */

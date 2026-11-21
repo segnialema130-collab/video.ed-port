@@ -128,7 +128,7 @@ export function VideoPreviewModal({project, onClose}: VideoPreviewModalProps) {
           exit={{opacity: 0}}
           transition={{duration: 0.2}}
           onClick={onClose}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 sm:p-6 overflow-y-auto"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#0B1124]/80 backdrop-blur-md p-4 sm:p-6 overflow-y-auto"
           role="dialog"
           aria-modal="true"
           aria-labelledby="video-modal-title"
@@ -139,13 +139,13 @@ export function VideoPreviewModal({project, onClose}: VideoPreviewModalProps) {
             exit={{opacity: 0, scale: 0.97, y: 12}}
             transition={{duration: 0.22, ease: [0.16, 1, 0.3, 1]}}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-5xl overflow-hidden rounded-2xl border border-white/15 bg-[#0B0B11] shadow-2xl"
+            className="relative w-full max-w-5xl overflow-hidden rounded-2xl border border-sky-200/20 bg-[#162040] shadow-2xl"
           >
             {/* Top Modal Header */}
-            <div className="flex items-center justify-between gap-4 border-b border-white/10 px-5 py-4 sm:px-6">
+            <div className="flex items-center justify-between gap-4 border-b border-sky-200/15 px-5 py-4 sm:px-6">
               <div className="min-w-0">
-                <div className="flex flex-wrap items-center gap-2 text-xs text-zinc-400">
-                  <span className="text-sky-400 font-medium">{project.category}</span>
+                <div className="flex flex-wrap items-center gap-2 text-xs text-slate-300">
+                  <span className="text-sky-300 font-medium">{project.category}</span>
                   <span aria-hidden="true">·</span>
                   <span>{project.client}</span>
                   <span aria-hidden="true">·</span>
@@ -160,14 +160,14 @@ export function VideoPreviewModal({project, onClose}: VideoPreviewModalProps) {
                 type="button"
                 onClick={onClose}
                 aria-label="Close video preview"
-                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/15 bg-zinc-900 text-zinc-200 transition-colors hover:border-white/35 hover:text-white cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-sky-200/20 bg-[#111936] text-slate-200 transition-colors hover:border-sky-300/50 hover:text-white cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
               >
                 <X className="h-5 w-5" />
               </button>
             </div>
 
             {/* Video Player Stage */}
-            <div ref={playerWrapperRef} className="relative aspect-video w-full bg-black overflow-hidden">
+            <div ref={playerWrapperRef} className="relative aspect-video w-full bg-[#0C1328] overflow-hidden">
               {embedUrl ? (
                 <iframe
                   src={embedUrl}
@@ -195,7 +195,7 @@ export function VideoPreviewModal({project, onClose}: VideoPreviewModalProps) {
                     setCurrentTimeSec(videoRef.current.currentTime);
                     setProgress((videoRef.current.currentTime / videoRef.current.duration) * 100);
                   }}
-                  className="h-full w-full object-contain bg-black cursor-pointer"
+                  className="h-full w-full object-contain bg-[#0C1328] cursor-pointer"
                 />
               ) : (
                 /* Interactive Studio Preview Sequence (when no external MP4/YouTube URL is linked yet) */
@@ -281,7 +281,7 @@ export function VideoPreviewModal({project, onClose}: VideoPreviewModalProps) {
                     value={progress}
                     onChange={handleScrub}
                     aria-label="Seek video timeline"
-                    className="h-1.5 w-full cursor-pointer accent-violet-500"
+                    className="h-1.5 w-full cursor-pointer accent-sky-400"
                   />
 
                   <div className="flex items-center justify-between gap-4">
@@ -344,10 +344,10 @@ export function VideoPreviewModal({project, onClose}: VideoPreviewModalProps) {
 
             {/* Project Credits & Details Footer */}
             <div className="grid grid-cols-1 gap-4 px-5 py-5 sm:grid-cols-12 sm:px-6">
-              <p className="text-sm leading-relaxed text-zinc-300 sm:col-span-8">{project.description}</p>
-              <div className="sm:col-span-4 sm:border-l sm:border-white/10 sm:pl-6">
-                <p className="text-xs font-medium text-zinc-400">Pipeline &amp; Tools</p>
-                <p className="mt-1.5 text-sm text-zinc-200">{project.tools.join(' · ')}</p>
+              <p className="text-sm leading-relaxed text-slate-200 sm:col-span-8">{project.description}</p>
+              <div className="sm:col-span-4 sm:border-l sm:border-sky-200/15 sm:pl-6">
+                <p className="text-xs font-medium text-slate-400">Pipeline &amp; Tools</p>
+                <p className="mt-1.5 text-sm text-slate-100">{project.tools.join(' · ')}</p>
               </div>
             </div>
           </motion.div>

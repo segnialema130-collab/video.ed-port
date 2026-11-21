@@ -67,7 +67,7 @@ function ProjectCard({project, isFeaturedSlot, onSelect}: TiltCardProps) {
           transform: `perspective(1000px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`,
           transition: 'transform 180ms cubic-bezier(0.16, 1, 0.3, 1)',
         }}
-        className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-[#0B0B11] will-change-transform hover:border-violet-400/50"
+        className="group relative h-full overflow-hidden rounded-2xl border border-sky-200/15 bg-[#182244] will-change-transform hover:border-sky-300/60"
       >
         <button
           type="button"
@@ -78,7 +78,7 @@ function ProjectCard({project, isFeaturedSlot, onSelect}: TiltCardProps) {
         >
           {/* Media Frame */}
           <div
-            className={`relative w-full overflow-hidden bg-zinc-900 ${
+            className={`relative w-full overflow-hidden bg-[#131C3A] ${
               isFeaturedSlot ? 'aspect-[16/10] lg:h-full lg:min-h-[420px]' : 'aspect-[16/10]'
             }`}
           >
@@ -103,28 +103,28 @@ function ProjectCard({project, isFeaturedSlot, onSelect}: TiltCardProps) {
                 className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
               />
             ) : (
-              <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-zinc-900 via-[#151226] to-zinc-950 p-6 text-center">
-                <Film className="h-8 w-8 text-violet-400" />
-                <span className="mt-2 text-sm font-medium text-zinc-300">{project.title}</span>
+              <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-[#162040] via-[#1E2B54] to-[#111831] p-6 text-center">
+                <Film className="h-8 w-8 text-sky-300" />
+                <span className="mt-2 text-sm font-medium text-slate-200">{project.title}</span>
               </div>
             )}
 
             {/* Measured contrast scrim */}
             <div
               aria-hidden="true"
-              className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 transition-opacity duration-200 group-hover:from-black/95"
+              className="absolute inset-0 bg-gradient-to-t from-[#0A1024]/92 via-[#0F1733]/35 to-transparent transition-opacity duration-200 group-hover:from-[#0A1024]/95"
             />
 
             {/* Top-right play button affordance */}
-            <div className="absolute top-4 right-4 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-black/55 backdrop-blur-md text-white transition-all duration-200 group-hover:scale-105 group-hover:border-violet-400 group-hover:bg-violet-600">
+            <div className="absolute top-4 right-4 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/25 bg-[#101833]/65 backdrop-blur-md text-white transition-all duration-200 group-hover:scale-105 group-hover:border-sky-300 group-hover:bg-sky-500">
               <Play className="h-4 w-4 fill-current translate-x-[1px]" />
             </div>
 
             {/* Bottom Content Overlay */}
             <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
               {/* Unboxed Metadata (Zero Pills) */}
-              <div className="flex flex-wrap items-center gap-2 text-xs font-medium text-zinc-300">
-                <span className={project.accentHue === 'blue' ? 'text-sky-400' : 'text-violet-400'}>
+              <div className="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-200">
+                <span className={project.accentHue === 'blue' ? 'text-sky-300' : 'text-amber-300'}>
                   {project.category}
                 </span>
                 <span aria-hidden="true">·</span>
@@ -204,7 +204,7 @@ export function PortfolioSection({onSelectProject}: PortfolioSectionProps) {
         {/* Header Row */}
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div>
-            <p className="text-sm font-medium text-violet-400">Selected Portfolio</p>
+            <p className="text-sm font-medium text-sky-300">Selected Portfolio</p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Featured Edits &amp; Motion Reels
             </h2>
@@ -222,9 +222,9 @@ export function PortfolioSection({onSelectProject}: PortfolioSectionProps) {
             <button
               type="button"
               onClick={() => fileInputRef.current?.click()}
-              className="inline-flex min-h-[40px] items-center gap-2 rounded-lg border border-white/15 bg-zinc-900/70 px-4 py-2 text-xs font-medium text-zinc-200 transition-colors duration-150 hover:border-sky-400/50 hover:text-white whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+              className="inline-flex min-h-[40px] items-center gap-2 rounded-lg border border-sky-200/20 bg-[#1B264B]/80 px-4 py-2 text-xs font-medium text-slate-200 transition-colors duration-150 hover:border-sky-400/50 hover:text-white whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
             >
-              <Plus className="h-3.5 w-3.5 text-sky-400" />
+              <Plus className="h-3.5 w-3.5 text-sky-300" />
               Test Local Video
             </button>
           </div>
@@ -234,7 +234,7 @@ export function PortfolioSection({onSelectProject}: PortfolioSectionProps) {
         <div
           role="tablist"
           aria-label="Portfolio categories"
-          className="mt-8 flex flex-wrap items-center gap-2 border-b border-white/10 pb-5"
+          className="mt-8 flex flex-wrap items-center gap-2 border-b border-sky-200/15 pb-5"
         >
           {PORTFOLIO_CATEGORIES.map((category) => {
             const isActive = activeCategory === category;
@@ -245,10 +245,10 @@ export function PortfolioSection({onSelectProject}: PortfolioSectionProps) {
                 type="button"
                 aria-selected={isActive}
                 onClick={() => setActiveCategory(category)}
-                className={`min-h-[40px] rounded-lg px-4 py-2 text-xs font-semibold transition-all duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 ${
+                className={`min-h-[40px] rounded-lg px-4 py-2 text-xs font-semibold transition-all duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
                   isActive
-                    ? 'bg-gradient-to-r from-violet-600 to-blue-600 text-white shadow-[0_0_20px_rgba(139,92,246,0.3)]'
-                    : 'bg-zinc-900/70 text-zinc-300 border border-white/10 hover:border-white/25 hover:text-white'
+                    ? 'bg-gradient-to-r from-sky-500 to-indigo-600 text-white shadow-[0_0_20px_rgba(56,189,248,0.3)]'
+                    : 'bg-[#192447]/80 text-slate-200 border border-sky-200/15 hover:border-sky-300/40 hover:text-white'
                 }`}
               >
                 {category}

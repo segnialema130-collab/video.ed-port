@@ -72,10 +72,10 @@ export function CustomCursor() {
       <div
         className={`-translate-x-1/2 -translate-y-1/2 flex items-center justify-center rounded-full border transition-all duration-150 ease-out ${
           isWatch
-            ? 'h-16 w-16 border-violet-400/70 bg-violet-600/20 backdrop-blur-md text-[11px] font-medium tracking-wide text-white shadow-[0_0_24px_rgba(139,92,246,0.35)]'
+            ? 'h-16 w-16 border-sky-300/75 bg-sky-500/20 backdrop-blur-md text-[11px] font-medium tracking-wide text-white shadow-[0_0_24px_rgba(56,189,248,0.35)]'
             : isPointer
-              ? 'h-9 w-9 border-sky-400/70 bg-sky-400/10'
-              : 'h-6 w-6 border-white/30 bg-transparent'
+              ? 'h-9 w-9 border-amber-300/70 bg-amber-300/10'
+              : 'h-6 w-6 border-sky-200/35 bg-transparent'
         }`}
       >
         {isWatch ? 'Play' : null}
